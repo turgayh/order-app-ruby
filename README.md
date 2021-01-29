@@ -13,8 +13,8 @@
 #### order/create
 
 - **Parameters** : 
-> Currency: ['TL','USD','EUR'], require
-> NameSurname: require
-> TotalPrice: require
-> DiscountPrice:
-> Category: require
+ Currency: ['TL','USD','EUR'], require
+ NameSurname: require
+ TotalPrice: require
+ DiscountPrice:
+ Category: require
