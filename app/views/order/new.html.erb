@@ -1,0 +1,23 @@
+<br/>
+<br/>
+<br/>
+
+
+<form action="/order" accept-charset="UTF-8" method="post">
+<%= csrf_meta_tags %>
+
+
+  <div>
+    <label for="order_total_price">Total Price</label><br>
+    <input type="text" name="order[total_price]" id="order_total_price">
+  </div>
+
+  <div>
+    <label for="order_currency">Body</label><br>
+    <textarea name="order[currency]" id="order_currency"></textarea>
+  </div>
+
+  <div>
+    <input type="submit" name="commit" value="Create Order" data-disable-with="Create Order">
+  </div>
+</form>

@@ -1,0 +1,50 @@
+<%= form_with(model: order) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :total_price %>
+    <%= form.text_field :total_price %>
+  </div>
+
+
+  <div class="control-group">
+    <%= form.label :currency %>
+    <div class = "controls">
+      <%= form.select(:currency, options_for_select([['TL','TL'],['USD','USD'],['EUR','EUR']])) %>
+    </div>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :name_surname %>
+    <%= form.text_field :name_surname %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :discount_price %>
+    <%= form.text_field :discount_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+<%= form.association :category, collection: Category.all(), input_html: {id: 'dropdown-choice-select'} %>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
