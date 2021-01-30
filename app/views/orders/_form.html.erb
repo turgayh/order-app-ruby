@@ -42,6 +42,8 @@
   </div>
 
 
+  <% options = options_from_collection_for_select(@categories, 'id', 'category_name') %>
+  <%= form.select :category,  options %>
 
   <div class="actions">
     <%= form.submit %>
