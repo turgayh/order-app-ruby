@@ -16,7 +16,7 @@ class Order < ApplicationRecord
     end
 
     def check_name_surname
-        errors.add(:name_surname , "at least two word!!") if name_surname.split.length() < 2
+        errors.add(:name_surname , " contain at least two words") if name_surname.split.length() < 2
     end 
 
 end
