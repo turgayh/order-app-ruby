@@ -2,7 +2,7 @@
 
 <h1>Categories</h1>
 
-<table>
+<table class ='table table-hover'>
   <thead>
     <tr>
       <th>Category name</th>
@@ -14,9 +14,10 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.category_name %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to '<button type="button" class="btn btn-success btn-sm" >Show</button>'.html_safe , category %></td>
+        <td><%= link_to '<button type="button" class="btn btn-primary btn-sm" >Edit</button>'.html_safe, edit_order_path(category) %></td>
+        <td><%= link_to '<button type="button" class="btn btn-danger btn-sm" >Delete</button>'.html_safe, category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>

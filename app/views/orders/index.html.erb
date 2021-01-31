@@ -1,3 +1,4 @@
+<br/>
 <p id="notice"><%= notice %></p>
 
 <h1>Orders</h1>
@@ -22,9 +23,10 @@
         <td><%= order.name_surname %></td>
         <td><%= order.discount_price %></td>
         <td><%= order.category %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to '<button type="button" class="btn btn-success btn-sm" >Show</button>'.html_safe , order %></td>
+        <td><%= link_to '<button type="button" class="btn btn-primary btn-sm" >Edit</button>'.html_safe, edit_order_path(order) %></td>
+        <td><%= link_to '<button type="button" class="btn btn-danger btn-sm" >Delete</button>'.html_safe, order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,6 +34,7 @@
 
 <br>
 
-<%= link_to 'New Order', new_order_path %> <br/>
-<%= link_to 'New Category', new_category_path %>
-
+<div >
+  <%= link_to '<button type="button" class="btn btn-outline-primary" >New Order</button>'.html_safe , new_order_path %> 
+  <%= link_to '<button type="button" class="btn btn-outline-primary" >New Category</button>'.html_safe , new_category_path %>
+</div>
