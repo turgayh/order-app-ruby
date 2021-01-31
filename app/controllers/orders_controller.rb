@@ -68,4 +68,6 @@ class OrdersController < ApplicationController
     def order_params
       params.require(:order).permit(:total_price, :currency, :name_surname, :discount_price, :category)
     end
+
+
 end
